@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Surya Potti - Senior Software Engineer specializing in Java, Spring Boot, Microservices, Kafka and Redis.">
+    <title>Surya Potti | Senior Software Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"]
+                    }
+                }
+            }
+        };
+    </script>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+<div class="scroll-progress"></div>
+<header class="fixed top-0 left-0 right-0 z-50 glass-nav">
+        <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#home" class="text-xl font-bold tracking-wide">
+                <span class="accent-text">SP</span>
+            </a>
+
+            <button id="menuButton" class="md:hidden text-2xl" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+
+            <div id="navMenu" class="nav-menu hidden md:flex gap-7 items-center">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#certification" class="nav-link">Certification</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+
+            <button id="themeToggle"
+                    class="theme-toggle"
+                    type="button"
+                    aria-label="Switch to light mode"
+                    title="Switch to light mode">
+                <i class="fa-solid fa-sun" aria-hidden="true"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="min-h-screen flex items-center section-padding hero-section">
+            <div class="max-w-6xl mx-auto w-full grid lg:grid-cols-2 gap-12 items-center">
+                <div class="reveal">
+                    <p class="accent-text font-semibold tracking-[0.2em] uppercase mb-4">
+                        Senior Software Engineer
+                    </p>
+
+                    <h1 class="text-5xl md:text-7xl font-extrabold leading-tight">
+                        Hi, I'm <span class="gradient-text">Surya Potti</span>
+                    </h1>
+
+                    <p class="mt-6 text-xl md:text-2xl text-slate-300">
+                        <span id="heroRole">Java Full Stack Developer</span><span class="typing-cursor">|</span>
+                    </p>
+
+                    <p class="mt-5 max-w-xl text-slate-400 leading-8">
+                        Results-driven software engineer with 3.7 years of experience
+                        building scalable Java and Spring Boot microservices using Kafka
+                        and Redis for mission-critical systems.
+                    </p>
+
+                    <div class="mt-8 flex flex-wrap gap-4">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="./resources/documents/Surya Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary resume-btn"><i class="fa-solid fa-eye"></i> View Resume</a>
+                        <a href="./resources/documents/Surya Resume.pdf" download class="btn btn-secondary resume-btn"><i class="fa-solid fa-file-arrow-down"></i> Download Resume</a>
+                    </div>
+
+                    <div class="mt-8 flex flex-wrap gap-3">
+                        <span class="tech-pill">Java 8</span>
+                        <span class="tech-pill">Spring Boot</span>
+                        <span class="tech-pill">Microservices</span>
+                        <span class="tech-pill">Kafka</span>
+                        <span class="tech-pill">Redis</span>
+                    </div>
+                </div>
+
+                <div class="reveal delay-1 flex justify-center">
+                    <div class="hero-orbit">
+                        <div class="profile-photo-wrap">
+                            <img
+                                src="./resources/images/profile.jpg"
+                                alt="Surya Potti"
+                                class="profile-photo"
+                            >
+                        </div>
+
+                        <div class="hero-card">
+                            <div class="text-6xl font-black accent-text">3.7</div>
+                            <p class="mt-3 text-slate-300">Years of Experience</p>
+                            <div class="hero-divider"></div>
+                            <div class="grid grid-cols-2 gap-5 text-left mt-6">
+                                <div>
+                                    <strong>99.95%</strong>
+                                    <span>System uptime</span>
+                                </div>
+                                <div>
+                                    <strong>80%+</strong>
+                                    <span>Test coverage</span>
+                                </div>
+                                <div>
+                                    <strong>45%</strong>
+                                    <span>Fewer DB queries</span>
+                                </div>
+                                <div>
+                                    <strong>350ms</strong>
+                                    <span>Improved API response</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section-padding">
+            <div class="max-w-6xl mx-auto">
+                <div class="section-heading reveal">
+                    <h2>About Me</h2>
+                </div>
+
+                <div class="grid lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-2 glass-card p-8 reveal">
+                        <p class="text-slate-300 leading-8">
+                            I am a Senior Software Engineer specializing in Java backend
+                            development and microservices. My experience includes building
+                            scalable Spring Boot services, event-driven systems with Apache
+                            Kafka, and distributed caching with Redis.
+                        </p>
+                        <p class="text-slate-300 leading-8 mt-5">
+                            I have worked on financial and sports management systems,
+                            contributed to resilient system design, implemented unit testing,
+                            and supported teammates through mentoring and technical
+                            collaboration.
+                        </p>
+                    </div>
+
+                    <div class="glass-card p-8 reveal delay-1">
+                        <h3 class="text-xl font-bold mb-5">Quick Info</h3>
+                        <div class="space-y-4 text-slate-400">
+                            <p><span class="label">Location</span> Chennai, India</p>
+                            <p><span class="label">Experience</span> 3.7 Years</p>
+                            <p><span class="label">Degree</span> BTech</p>
+                            <p><span class="label">Focus</span> Backend Engineering</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section-padding section-alt">
+            <div class="max-w-6xl mx-auto">
+                <div class="section-heading reveal">
+                    <h2>Technical Skills</h2>
+                </div>
+
+                <p class="section-subtitle reveal">
+                    Hover over a card to flip it and explore the technologies in each area.
+                </p>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-7 mt-10">
+
+                    <div class="flip-card reveal">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front skill-front">
+                                <div class="skill-icon"><i class="fa-solid fa-server" aria-hidden="true"></i></div>
+                                <h3>Backend</h3><span class="skill-level-badge">Primary</span>
+                                <p>Java & Spring ecosystem</p>
+                                <small><span class="hover-instruction">Hover to explore <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span><span class="touch-instruction">Tap to explore <i class="fa-solid fa-hand-pointer" aria-hidden="true"></i></span></small>
+                            </div>
+                            <div class="flip-card-back">
+                                <span class="card-number">01</span>
+                                <h3>Backend Development</h3>
+                                <ul>
+                                    <li>Java 8</li>
+                                    <li>Spring Boot</li>
+                                    <li>Microservices</li>
+                                    <li>REST APIs</li>
+                                    <li>Stream APIs</li>
+                                    <li>Collection Framework</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card reveal delay-1">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front skill-front">
+                                <div class="skill-icon"><i class="fa-brands fa-react" aria-hidden="true"></i></div>
+                                <h3>Frontend</h3><span class="skill-level-badge">Hands-on</span>
+                                <p>Modern web development</p>
+                                <small><span class="hover-instruction">Hover to explore <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span><span class="touch-instruction">Tap to explore <i class="fa-solid fa-hand-pointer" aria-hidden="true"></i></span></small>
+                            </div>
+                            <div class="flip-card-back">
+                                <span class="card-number">02</span>
+                                <h3>Frontend Development</h3>
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>Tailwind CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>React</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="flip-card reveal delay-2">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front skill-front">
+                                <div class="skill-icon"><i class="fa-solid fa-database" aria-hidden="true"></i></div>
+                                <h3>Database</h3><span class="skill-level-badge">Hands-on</span>
+                                <p>Data & caching technologies</p>
+                                <small><span class="hover-instruction">Hover to explore <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span><span class="touch-instruction">Tap to explore <i class="fa-solid fa-hand-pointer" aria-hidden="true"></i></span></small>
+                            </div>
+                            <div class="flip-card-back">
+                                <span class="card-number">03</span>
+                                <h3>Database & Cache</h3>
+                                <ul>
+                                    <li>PostgreSQL</li>
+                                    <li>MySQL</li>
+                                    <li>MongoDB</li>
+                                    <li>Redis</li>
+                                    <li>Hibernate</li>
+                                    <li>JPA</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card reveal">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front skill-front">
+                                <div class="skill-icon"><i class="fa-solid fa-list-check" aria-hidden="true"></i></div>
+                                <h3>Testing</h3><span class="skill-level-badge">Hands-on</span>
+                                <p>Quality & reliability</p>
+                                <small><span class="hover-instruction">Hover to explore <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span><span class="touch-instruction">Tap to explore <i class="fa-solid fa-hand-pointer" aria-hidden="true"></i></span></small>
+                            </div>
+                            <div class="flip-card-back">
+                                <span class="card-number">04</span>
+                                <h3>Testing</h3>
+                                <ul>
+                                    <li>JUnit</li>
+                                    <li>Mockito</li>
+                                    <li>Unit testing</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card reveal delay-1">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front skill-front">
+                                <div class="skill-icon"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i></div>
+                                <h3>Messaging</h3><span class="skill-level-badge">Hands-on</span>
+                                <p>Event-driven architecture</p>
+                                <small><span class="hover-instruction">Hover to explore <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span><span class="touch-instruction">Tap to explore <i class="fa-solid fa-hand-pointer" aria-hidden="true"></i></span></small>
+                            </div>
+                            <div class="flip-card-back">
+                                <span class="card-number">05</span>
+                                <h3>Messaging</h3>
+                                <ul>
+                                    <li>Apache Kafka</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card reveal delay-1">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front skill-front">
+                                <div class="skill-icon">
+                                    <i class="fa-solid fa-cloud cloud-bg"></i>
+                                </div>
+                                <h3>Cloud</h3><span class="skill-level-badge">Hands-on</span>
+                                <p>Cloud Computing</p>
+                                <small><span class="hover-instruction">Hover to explore <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span><span class="touch-instruction">Tap to explore <i class="fa-solid fa-hand-pointer" aria-hidden="true"></i></span></small>
+                            </div>
+                            <div class="flip-card-back">
+                                <span class="card-number">06</span>
+                                <h3>Cloud</h3>
+                                <ul>
+                                    <li>AWS</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card reveal delay-1">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front skill-front">
+                                <div class="skill-icon">
+                                    <i class="fa-solid fa-cloud cloud-bg"></i>
+                                </div>
+                                <h3>DevOps</h3><span class="skill-level-badge">Hands-on</span>
+                                <p>Development & delivery tools</p>
+                                <small><span class="hover-instruction">Hover to explore <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span><span class="touch-instruction">Tap to explore <i class="fa-solid fa-hand-pointer" aria-hidden="true"></i></span></small>
+                            </div>
+                            <div class="flip-card-back">
+                                <span class="card-number">07</span>
+                                <h3>DevOps</h3>
+                                <ul>
+                                    <li>Git</li>
+                                    <li>Jenkins</li>
+                                    <li>CI/CD</li>
+                                    <li>Docker</li>
+                                    <li>Kubernetes</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card reveal delay-2">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front skill-front">
+                                <div class="skill-icon">
+                                    <i class="fa-solid fa-tools" aria-hidden="true"></i>
+                                </div>
+                                <h3>Tools</h3><span class="skill-level-badge">Working</span>
+                                <p>Engineering workflow</p>
+                                <small><span class="hover-instruction">Hover to explore <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span><span class="touch-instruction">Tap to explore <i class="fa-solid fa-hand-pointer" aria-hidden="true"></i></span></small>
+                            </div>
+                            <div class="flip-card-back">
+                                <span class="card-number">08</span>
+                                <h3>Tools</h3>
+                                <ul>
+                                    <li>Postman</li>
+                                    <li>Jira</li>
+                                    <li>BIRT</li>
+                                    <li>Groovy</li>
+                                    <li>Arcos</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section-padding">
+            <div class="max-w-6xl mx-auto">
+                <div class="section-heading reveal">
+                    <h2>Work Experience</h2>
+                </div>
+
+                <div class="timeline mt-12">
+
+                    <article class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="glass-card p-7">
+                            <div class="flex flex-col md:flex-row md:justify-between gap-3">
+                                <div>
+                                    <p class="accent-text font-semibold">Senior Software Engineer</p>
+                                    <h3 class="text-2xl font-bold mt-1">Aspire Systems</h3>
+                                </div>
+                                <span class="date-badge">05/2023 – 02/2026</span>
+                            </div>
+
+                            <p class="mt-5 text-slate-400 font-medium">
+                                Project: NACH — National Automated Clearing House
+                            </p>
+
+                            <div class="grid md:grid-cols-2 gap-5 mt-6">
+                                <div class="metric-card">
+                                    <strong>~45%</strong>
+                                    <span>Reduction in database queries using Redis</span>
+                                </div>
+                                <div class="metric-card">
+                                    <strong>~800ms → ~350ms</strong>
+                                    <span>API response-time improvement</span>
+                                </div>
+                                <div class="metric-card">
+                                    <strong>80%+</strong>
+                                    <span>Unit-test coverage across key microservices</span>
+                                </div>
+                                <div class="metric-card">
+                                    <strong>99.95%</strong>
+                                    <span>Uptime contribution through resilient design</span>
+                                </div>
+                            </div>
+
+                            <ul class="experience-list mt-6">
+                                <li>Implemented distributed caching using Redis.</li>
+                                <li>Designed event-driven architecture using Apache Kafka.</li>
+                                <li>Enabled asynchronous interbank transaction processing.</li>
+                                <li>Implemented unit tests using Mockito.</li>
+                                <li>Contributed to monitoring and failover strategies.</li>
+                                <li>Mentored junior developers on microservices and design patterns.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="glass-card p-7">
+                            <div class="flex flex-col md:flex-row md:justify-between gap-3">
+                                <div>
+                                    <p class="accent-text font-semibold">Software Engineer</p>
+                                    <h3 class="text-2xl font-bold mt-1">Aspire Systems</h3>
+                                </div>
+                                <span class="date-badge">10/2022 – 04/2023</span>
+                            </div>
+
+                            <p class="mt-5 text-slate-400 font-medium">
+                                Project: Sportlink
+                            </p>
+
+                            <ul class="experience-list mt-5">
+                                <li>Designed and implemented REST-based microservices.</li>
+                                <li>Replaced monolithic Navajo flows with independently deployable services.</li>
+                                <li>Migrated critical modules from Navajo scripts to Java Spring Boot microservices.</li>
+                                <li>Improved scalability, observability, and ease of deployment.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="glass-card p-7">
+                            <div class="flex flex-col md:flex-row md:justify-between gap-3">
+                                <div>
+                                    <p class="accent-text font-semibold">Trainee Software Engineer</p>
+                                    <h3 class="text-2xl font-bold mt-1">Aspire Systems</h3>
+                                </div>
+                                <span class="date-badge">08/2022 – 10/2022</span>
+                            </div>
+
+                            <ul class="experience-list mt-5">
+                                <li>Completed intensive training in Core Java and Spring Boot.</li>
+                                <li>Worked with REST APIs and relational databases.</li>
+                                <li>Built foundational projects using object-oriented design.</li>
+                                <li>Applied RESTful patterns and database modeling.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section-padding section-alt">
+            <div class="max-w-6xl mx-auto">
+                <div class="section-heading reveal">
+                    <h2>Featured Projects</h2>
+                </div>
+
+                <p class="section-subtitle reveal">
+                    Explore the systems and engineering work highlighted in my professional experience.
+                </p>
+
+                <div class="grid lg:grid-cols-2 gap-8 mt-10">
+
+                    <div class="project-flip-card reveal">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front project-front">
+                                <div class="project-number">01</div>
+                                <span class="project-type">Financial System</span>
+                                <h3>NACH</h3>
+                                <p>National Automated Clearing House</p>
+                                <div class="project-stack">
+                                    <span>Java</span>
+                                    <span>Spring Boot</span>
+                                    <span>Microservices</span>
+                                    <span>Kafka</span>
+                                    <span>Redis</span>
+                                </div>
+                                <small>
+                                    <span class="hover-instruction">Hover to see details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span><span class="touch-instruction">Tap to see details <i class="fa-solid fa-hand-pointer" aria-hidden="true"></i></span>
+                                </small>
+                            </div>
+
+                            <div class="flip-card-back project-back">
+                                <span class="project-type">NACH</span>
+                                <h3>Engineering Highlights</h3>
+                                <ul>
+                                    <li>Distributed caching with Redis.</li>
+                                    <li>Event-driven architecture with Apache Kafka.</li>
+                                    <li>Asynchronous interbank transaction processing.</li>
+                                    <li>Fault tolerance and reliable message delivery.</li>
+                                    <li>Mockito-based unit testing with 80%+ coverage.</li>
+                                    <li>Resilient design, monitoring and failover strategies.</li>
+                                </ul>
+                                <div class="project-metrics">
+                                    <span>45% fewer DB queries</span>
+                                    <span>350ms API response</span>
+                                    <span>99.95% uptime</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-flip-card reveal delay-1">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front project-front">
+                                <div class="project-number">02</div>
+                                <span class="project-type">Sports Management</span>
+                                <h3>Sportlink</h3>
+                                <p>Microservices modernization project</p>
+                                <div class="project-stack">
+                                    <span>Java</span>
+                                    <span>Spring Boot</span>
+                                    <span>REST</span>
+                                    <span>Microservices</span>
+                                </div>
+                                <small>
+                                    <span class="hover-instruction">Hover to see details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span><span class="touch-instruction">Tap to see details <i class="fa-solid fa-hand-pointer" aria-hidden="true"></i></span>
+                                </small>
+                            </div>
+
+                            <div class="flip-card-back project-back">
+                                <span class="project-type">Sportlink</span>
+                                <h3>Engineering Highlights</h3>
+                                <ul>
+                                    <li>Designed REST-based microservices.</li>
+                                    <li>Replaced monolithic Navajo flows.</li>
+                                    <li>Migrated critical modules to Java Spring Boot.</li>
+                                    <li>Enabled independent deployment.</li>
+                                    <li>Improved scalability and observability.</li>
+                                    <li>Improved ease of deployment and change cycles.</li>
+                                </ul>
+                                <div class="project-metrics">
+                                    <span>REST APIs</span>
+                                    <span>Microservices</span>
+                                    <span>Java Spring Boot</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="certification" class="section-padding">
+            <div class="max-w-6xl mx-auto">
+                <div class="section-heading reveal">
+                    <h2>Certification</h2>
+                </div>
+
+                <div class="certification-card reveal mt-10">
+                    <div class="cert-icon"><i class="fa-brands fa-aws"></i></div>
+                    <div>
+                        <p class="accent-text font-semibold uppercase tracking-widest text-sm">
+                            Cloud Certification
+                        </p>
+                        <h3 class="text-3xl font-bold mt-2">
+                            AWS Certified Cloud Practitioner
+                        </h3>
+                        <p class="text-slate-400 mt-3">
+                            Certified July 2026 · Valid through July 2029
+                        </p>
+                    </div>
+                    <div class="cert-actions">
+                        <div class="cert-status">CERTIFIED</div>
+                        <a
+                            href="https://www.credly.com/badges/e57b0032-3676-4e8b-a948-944b123fdb21"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="verify-link"
+                        >
+                            Verify Credential 
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section-padding section-alt">
+            <div class="max-w-6xl mx-auto">
+                <div class="section-heading reveal">
+                    <h2>Education</h2>
+                </div>
+
+                <div class="glass-card p-8 mt-10 reveal flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+                    <div>
+                        <p class="accent-text font-semibold">Bachelor of Technology</p>
+                        <h3 class="text-2xl font-bold mt-2">Amrita Vishwa Vidyapeetham</h3>
+                        <p class="text-slate-400 mt-2">Coimbatore</p>
+                    </div>
+                    <span class="date-badge">08/2018 – 04/2022</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section-padding">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="section-heading justify-center reveal">
+                    <h2>Let's Connect</h2>
+                </div>
+
+                <p class="text-slate-400 leading-8 mt-6 reveal">
+                    Interested in Full-Stack development, Java microservices, or building
+                    scalable systems? Feel free to connect with me.
+                </p>
+
+                <div class="contact-grid mt-10 reveal">
+                    <a href="mailto:suryapotti2201@gmail.com" class="contact-card">
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                        <strong>Email</strong>
+                        <small>suryapotti2201@gmail.com</small>
+                    </a>
+
+                    <a href="tel:+917339082447" class="contact-card">
+                        <span><i class="fa-solid fa-phone"></i></span>
+                        <strong>Phone</strong>
+                        <small>+91 7339082447</small>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/suryapotti" target="_blank" rel="noopener noreferrer" class="contact-card">
+                        <span><i class="fa-brands fa-square-linkedin"></i></span>
+                        <strong>LinkedIn</strong>
+                        <small>linkedin.com/in/suryapotti</small>
+                    </a>
+
+                    <a href="https://github.com/suryapotti" target="_blank" rel="noopener noreferrer" class="contact-card">
+                        <span><i class="fa-brands fa-square-github"></i></span>
+                        <strong>GitHub</strong>
+                        <small>github.com/suryapotti</small>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-white/10 py-10 footer-upgraded">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="footer-main">
+                <div>
+                    <h3>Surya Potti</h3>
+                    <p>Java Full Stack Developer</p>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://github.com/suryapotti2201" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="cursor-code"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/suryapotti" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="mailto:suryapotti2201@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p><i class="fa-regular fa-copyright"></i> <span id="year"></span> Surya Potti. All rights reserved.</p>
+                <p>Built with HTML · Tailwind CSS · JavaScript</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="topButton" class="top-button" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
