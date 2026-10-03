@@ -281,10 +281,42 @@ body::after {
 
 /* ---------------- Flip Cards ---------------- */
 
-.flip-card,
+/* Keep skill cards at their existing height. */
+.flip-card {
+    height: 370px;
+}
+
+/* Allow project cards to grow with their content. */
 .project-flip-card {
-    perspective: 1200px;
-    height: 380px;
+    height: auto;
+    min-height: 370px;
+}
+
+.project-flip-card .flip-card-inner {
+    display: grid;
+    height: auto;
+    min-height: 370px;
+}
+
+/* Overlap both faces while letting the taller face set the height. */
+.project-flip-card .project-front,
+.project-flip-card .project-back {
+    position: relative;
+    inset: auto;
+    grid-area: 1 / 1;
+    height: auto;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+/* Leave room for the project number. */
+.project-flip-card .project-front {
+    padding-top: 85px;
+}
+
+/* Add space between the details and tags. */
+.project-flip-card .project-metrics {
+    padding-top: 18px;
 }
 
 .flip-card-inner {
