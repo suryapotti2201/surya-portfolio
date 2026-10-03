@@ -1111,6 +1111,45 @@ body::after {
 @media (max-width:1024px){
     .contact-grid{grid-template-columns:repeat(4,1fr)}
 }
-@media (max-width:767px){
+
+@media (max-width: 767px){
     .contact-grid{grid-template-columns:1fr}
+    #projects .project-flip-card {
+        height: auto;
+        min-height: 370px;
+        min-width: 0;
+    }
+
+    #projects .project-flip-card .flip-card-inner {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
+        height: auto;
+        min-height: 370px;
+    }
+
+    #projects .project-front,
+    #projects .project-back {
+        position: relative;
+        inset: auto;
+        grid-area: 1 / 1;
+        align-self: stretch;
+        width: 100%;
+        height: auto;
+        min-width: 0;
+        box-sizing: border-box;
+        overflow-wrap: anywhere;
+    }
+
+    #projects .project-front {
+        padding: 85px 25px 30px;
+    }
+
+    #projects .project-back {
+        padding: 25px;
+    }
+
+    #projects .project-metrics {
+        padding-top: 18px;
+    }
 }
