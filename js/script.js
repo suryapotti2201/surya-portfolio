@@ -174,3 +174,66 @@ document.addEventListener("DOMContentLoaded", () => {
   } const bar=document.querySelector('.scroll-progress');
   if(bar){const update=()=>{const max=document.documentElement.scrollHeight-innerHeight;bar.style.width=(max>0?(scrollY/max)*100:0)+'%'};addEventListener('scroll',update,{passive:true});update()}
 })();
+
+// Animate hero-card numbers once when the page opens.
+function animateHeroNumbers() {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        return;
+    }
+
+    const numbers = document.querySelectorAll(
+        ".hero-card > .accent-text, .hero-card strong"
+    );
+
+    numbers.forEach(element => {
+        if (element.dataset.animated === "true") return;
+
+        const originalText = element.textContent.trim();
+        const match = originalText.match(/^(\d+(?:\.\d+)?)(.*)$/);
+
+        if (!match) return;
+
+        element.dataset.animated = "true";
+
+        const target = Number(match[1]);
+        const suffix = match[2];
+        const decimals = (match[1].split(".")[1] || "").length;
+        const duration = 1600;
+        let startTime;
+
+        element.textContent = (0).toFixed(decimals) + suffix;
+
+        function updateNumber(timestamp) {
+            if (startTime === undefined) startTime = timestamp;
+
+            const progress = Math.min(
+                (timestamp - startTime) / duration,
+                1
+            );
+
+            // Slow down smoothly as the number reaches its target.
+            const easedProgress = 1 - Math.pow(1 - progress, 3);
+
+            element.textContent =
+                (target * easedProgress).toFixed(decimals) + suffix;
+
+            if (progress < 1) {
+                requestAnimationFrame(updateNumber);
+            } else {
+                element.textContent = originalText;
+            }
+        }
+
+        requestAnimationFrame(updateNumber);
+    });
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener(
+        "DOMContentLoaded",
+        animateHeroNumbers,
+        { once: true }
+    );
+} else {
+    animateHeroNumbers();
+}
