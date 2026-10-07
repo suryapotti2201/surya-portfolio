@@ -163,7 +163,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Portfolio upgrade interactions
 (function(){
-  const roles=['Java Full Stack Developer','Spring Boot Developer','Microservices Developer','Backend Engineer'];
+  const roles=['Java Full Stack Developer','Java Backed Developer', 'Java Developer', 'Spring Boot Developer',
+        'Microservices Developer','Backend Engineer'];
   const role=document.getElementById('heroRole');
   if(role && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
     let i=0,pos=0,deleting=false;
