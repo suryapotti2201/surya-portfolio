@@ -34,6 +34,8 @@ The repository contains a static portfolio website. The enterprise projects desc
 - **Interactive cards:** Skill and project cards reveal additional information on hover for pointer devices and on tap for touch devices.
 - **Keyboard card controls:** Focus a card with Tab and press Enter or Space to toggle its details.
 - **Animated hero text:** Rotates through developer roles; the typing effect is skipped when reduced motion is requested.
+- **Animated hero statistics:** Numbers count up once per page load, preserving decimals and units. The animation respects reduced-motion preferences.
+- **Glowing scroll progress:** A thin, glowing bar shows how much of the page has been scrolled, with colors adapted for light and dark themes.
 - **Scroll interactions:** Section reveal animations, a scroll progress bar, active navigation highlighting, and a back-to-top button.
 - **Resume access:** Separate buttons to view the PDF in a new tab and download it.
 - **Credential verification:** Direct link to the AWS credential on Credly.
